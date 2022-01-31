@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-dark mx-auto  py-3">
+        <div class="container">
+
+            <a class="offset-md-1 navbar-brand" href="/">friranger</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon "></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                {{#if isHome}}
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link mx-4" href="#services">Услуги</a>
+                    </li>
+                    <li class="nav-item mx-4 ">
+                        <a class="nav-link" href="#projects">Проекты</a>
+                    </li>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link" href="#about">Обо мне</a>
+                    </li>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link" href="#contacts">Контакты</a>
+                    </li>
+                </ul>
+                {{/if}}
+            </div>
+        </div>
+    </nav>

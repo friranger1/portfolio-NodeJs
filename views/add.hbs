@@ -1,0 +1,32 @@
+<h1>Добавить</h1>
+
+<form action="/add" class=" " method="POST">
+    <div class="input-field">
+        <input id="title" name="title" type="text" class="validate" required>
+        <label for="title">Название</label>
+        <span class="helper-text" data-error="Введите название"></span>
+    </div>
+    <div class="input-field">
+        <textarea id="description" name="description" type="text" class="validate" required  rows="4" placeholder="Oписание"></textarea>
+        <label for="description"></label>
+        <span class="helper-text" data-error="Введите описание"></span>
+    </div>
+
+    <div class="input-field">
+        <input id="price" name="price" type="text" class="validate" required min="1">
+        <label for="price">Цена</label>
+        <span class="helper-text" data-error="Введите цену"></span>
+    </div>
+    
+    <div class="input-field">
+        <input id="image"  name="image" type="text" class="validate" required>
+        <label for="image">URL картинки</label>
+        <span class="helper-text" data-error="Введите URL картинки"></span>
+    </div>
+    <div class="input-field">
+        <input id="videolink"  name="videolink" type="text" class="validate" required>
+        <label for="videolink">URL Видео</label>
+        <span class="helper-text" data-error="Введите URL видео"></span>
+    </div>
+    <button class="btn btn-primary input-field">Добавить проект</button>
+</form>

@@ -1,0 +1,19 @@
+<h1>Проекты</h1>
+<div class="card-group">
+{{#if projects.length}}
+{{#each projects}}
+
+  <div class="card" >
+  <img class="card-img-top" src="{{image}}" alt="{{title}}">
+  <div class="card-body">
+    <h5 class="card-title">{{title}}</h5>
+    <p class="card-text">{{description}}</p>
+    <a href="/projects/{{id}}" target="balck">Открыть проект</a>
+    <a href="/projects/{{id}}/edit?allow=true">Редактировать</a>
+  </div>
+</div>
+{{/each}}
+{{else}}
+</div>
+<p>Проектов пока нет =(</p>
+{{/if}}

@@ -1,0 +1,292 @@
+:root {
+    --violet-light: #5550F2;
+    --violet-dark: #282580;
+    --bg-gray: #F4F4F4;
+    --text-gray: #565656;
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-gray);
+}
+
+body {
+    background-color: var(--bg-gray);
+}
+
+
+/* navigation */
+
+.navbar {
+    background: var(--violet-light);
+    font-size: 20px;
+}
+
+.navbar-brand {
+    font-weight: 800;
+    font-size: 35px;
+}
+
+.navbar-nav {
+    text-align: right;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: white
+}
+
+
+/* video  */
+
+#hero {
+    max-width: 100%;
+}
+
+.video {
+    width: 100%;
+}
+
+
+/* services */
+
+.services {
+    background-color: var(--bg-gray);
+}
+
+.header {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin: 50px auto;
+    color: var(--violet-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-section {
+    font-size: 48px;
+    font-weight: 800;
+    display: inline-block;
+    padding-bottom: 15px;
+    position: relative;
+}
+
+.header-section::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 6px;
+    background-color: var(--violet-dark);
+}
+
+hr {
+    height: 5px;
+    border: none;
+}
+
+.card-group {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-rows: repeat(4, 1fr);
+    grid-auto-rows: minmax(auto, auto); */
+    grid-gap: 0px;
+    justify-content: center;
+    width: 100%;
+}
+
+.card {
+    background: var(--violet-light);
+    color: white;
+    border: 3px solid var(--bg-gray);
+    border-bottom: 0px solid var(--bg-gray);
+    font-size: 200%;
+    align-items: center;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: 800;
+    margin: 30px auto 50px;
+}
+
+.card-text {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+/* projects */
+
+.card-body-projects {
+    margin: 0;
+}
+
+.projects .card {
+    border: 0;
+}
+
+
+/* about  */
+
+.about {
+    margin-top: -50px;
+    padding-top: 50px;
+    background-color: var(--violet-light);
+    margin: auto;
+}
+
+.about-header {
+    font-weight: 800;
+    text-transform: uppercase;
+    color: white;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.about-description {
+    color: white;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+.about-image {
+    max-width: 300px;
+}
+
+.about .container {
+    padding-bottom: 50px;
+}
+
+.about .header {
+    margin-top: 0px;
+}
+
+
+/* contacts */
+
+#form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#form input {
+    border: none;
+    height: 50px;
+    margin: 0 0 20px 0;
+}
+
+#form textarea {
+    border: none;
+    height: 70px;
+    margin: 0 0 30px 0;
+}
+
+#form button {
+    height: 50px;
+    border: none;
+    background-color: var(--violet-light);
+    color: white;
+    margin-bottom: 30px;
+}
+
+.contacts-contacts {
+    color: var(--text-gray);
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+    font-weight: 500;
+}
+
+.contacts-header {
+    font-weight: 800;
+}
+
+
+/* footer  */
+
+.decoration-line {
+    color: var(--violet-light);
+    background-color: var(--violet-light);
+    height: 32px;
+    margin: 0 0 50px 0;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-icons a {
+    color: var(--text-gray);
+}
+
+
+/* add page  */
+
+.input-field {
+    margin: 10px 50px;
+}
+
+
+/* project page  */
+
+.project-video {
+    margin-top: 50px;
+}
+
+.project-description p {
+    font-size: 20px;
+    text-align: justify;
+}
+
+.project-contacts p {
+    font-size: 20px;
+}
+
+
+/* projects-page  */
+
+.card a {
+    color: white;
+}
+
+
+/* psevdoclass */
+
+.nav a:hover {
+    color: var(--bg-gray);
+}
+
+.footer a:hover {
+    color: var(--violet-light);
+}
+
+.card:hover {
+    background-color: var(--bg-gray);
+    color: var(--text-gray);
+}
+
+.card-text:last-child {
+    margin-bottom: 50px;
+}
+
+
+/* media  */
+
+@media only screen and (max-width: 1200px) {
+    .card-group {
+        grid-template-columns: repeat(auto-fit, 20rem);
+    }
+    .image-container {
+        display: flex;
+        justify-content: center;
+        padding-top: 30px;
+    }
+}
