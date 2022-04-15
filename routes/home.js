@@ -1,6 +1,7 @@
 const { Router } = require('express');
 const router = Router();
 const Project = require('../models/project')
+const ctrlTelegram = require('../api/telegramMsg');
 
 router.get('/', async(req, res) => {
     const projects = await Project.find()
@@ -12,5 +13,9 @@ router.get('/', async(req, res) => {
     });
     console.log(req.body)
 })
+
+
+
+router.post('/telegram', ctrlTelegram.sendMsg);
 
 module.exports = router;

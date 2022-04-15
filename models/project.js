@@ -21,6 +21,8 @@ const project = new Schema({
         type: String,
         required: true,
     },
+
+
 })
 
 module.exports = model('Project', project)
