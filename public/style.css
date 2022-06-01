@@ -3,6 +3,7 @@
     --violet-dark: #282580;
     --bg-gray: #F4F4F4;
     --text-gray: #565656;
+    --text-white: #ffffff;
 }
 
 * {
@@ -18,12 +19,17 @@ body {
     background-color: var(--bg-gray);
 }
 
+p {
+    font-size: 20px;
+}
+
 
 /* navigation */
 
 .navbar {
     background: var(--violet-light);
     font-size: 20px;
+    font-weight: 600;
 }
 
 .navbar-brand {
@@ -36,7 +42,7 @@ body {
 }
 
 .navbar-dark .navbar-nav .nav-link {
-    color: white
+    color: var(--bg-gray)
 }
 
 
@@ -72,18 +78,8 @@ body {
     font-size: 48px;
     font-weight: 800;
     display: inline-block;
-    padding-bottom: 15px;
+    /* padding-bottom: 15px; */
     position: relative;
-}
-
-.header-section::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 6px;
-    background-color: var(--violet-dark);
 }
 
 hr {
@@ -101,32 +97,44 @@ hr {
 
 .card {
     background: var(--violet-light);
-    color: white;
-    border: 3px solid var(--bg-gray);
+    color: var(--text-white);
+    /* border: 3px solid var(--bg-gray); */
     border-bottom: 0px solid var(--bg-gray);
     border-radius: 0;
 }
 
 .card-title {
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 800;
     margin: 30px auto 50px;
+    text-align: center;
 }
 
 .card-text {
     font-size: 18px;
     font-weight: 500;
+    text-align: center;
 }
 
 
 /* projects */
 
-.card-body-projects {
+.card-body-projects img {
     margin: 0;
+    opacity: .8;
 }
 
 .projects .card {
     border: 0;
+}
+
+.project-title {
+    position: absolute;
+    z-index: 2;
+    top: 10px;
+    font-weight: 800;
+    margin: 10px;
+    font-size: 24px;
 }
 
 
@@ -142,14 +150,14 @@ hr {
 .about-header {
     font-weight: 800;
     text-transform: uppercase;
-    color: white;
+    color: var(--text-white);
     font-size: 24px;
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
 }
 
 .about-description {
-    color: white;
-    margin-bottom: 30px;
+    color: var(--text-white);
+    margin-bottom: 60px;
     font-weight: 500;
 }
 
@@ -190,8 +198,12 @@ hr {
     height: 50px;
     border: none;
     background-color: var(--violet-light);
-    color: white;
+    color: var(--text-white);
     margin-bottom: 30px;
+}
+
+.contacts-description {
+    margin-bottom: 50px;
 }
 
 .contacts-contacts {
@@ -224,7 +236,7 @@ hr {
     position: fixed;
     font-size: 48px;
     background: #5550f2;
-    color: white;
+    color: var(--text-white);
     font-weight: 800;
     padding: 15px 50px 0px;
     margin: 0 0 30px 0;
@@ -304,23 +316,42 @@ hr {
 /* projects-page  */
 
 .card a {
-    color: white;
+    color: var(--text-white);
 }
 
 
 /* psevdoclass */
 
-.nav a:hover {
-    color: var(--bg-gray);
+
+/* .header-section::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 6px;
+    background-color: var(--violet-dark);
+} */
+
+.navbar a:hover {
+    color: var(--text-white);
+    transition: .5s;
 }
 
 .footer a:hover {
     color: var(--violet-light);
 }
 
-.card:hover {
+
+/* .card:hover {
     background-color: var(--bg-gray);
     color: var(--text-gray);
+} */
+
+.card-body-projects img:hover {
+    opacity: 1;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
 }
 
 .card-text:last-child {
@@ -341,5 +372,8 @@ hr {
     }
     .modal {
         font-size: 24px;
+    }
+    .header-section {
+        font-size: 34px;
     }
 }
