@@ -1,9 +1,10 @@
 :root {
     --violet-light: #5550F2;
     --violet-dark: #282580;
-    --bg-gray: #F4F4F4;
-    --text-gray: #565656;
-    --text-white: #ffffff;
+    --bg-gray: #1A1A1A;
+    --bg-black: #161616;
+    --text-gray: #d9d9d9;
+    --text-white: #FFFFFF;
 }
 
 * {
@@ -16,7 +17,7 @@ a {
 }
 
 body {
-    background-color: var(--bg-gray);
+    background-color: var(--bg-black);
 }
 
 p {
@@ -27,9 +28,10 @@ p {
 /* navigation */
 
 .navbar {
-    background: var(--violet-light);
+    background: var(--bg-black);
     font-size: 20px;
     font-weight: 600;
+    margin-bottom: 30px;
 }
 
 .navbar-brand {
@@ -42,7 +44,7 @@ p {
 }
 
 .navbar-dark .navbar-nav .nav-link {
-    color: var(--bg-gray)
+    color: var(--bg-white)
 }
 
 
@@ -54,70 +56,114 @@ p {
 
 .video {
     width: 100%;
+    opacity: .15;
+    background: var(--bg-black);
+    margin-top: -25px;
+}
+
+
+/* .video-text {
+    position: absolute;
+    bottom: 37%;
+    text-align: center;
+    width: 100%;
+    z-index: 100;
+} */
+
+.video-text-1-word {
+    text-align: center;
+    font-size: 75px;
+    font-weight: bold;
+    color: var(--violet-light);
+    margin: 0;
+}
+
+.video-text-1 {
+    text-align: center;
+    font-size: 75px;
+    font-weight: bold;
+    color: var(--text-white);
+    margin: 0;
+}
+
+.video-text-2 {
+    text-align: center;
+    font-size: 35px;
+    color: var(--text-gray);
+    margin: 0;
 }
 
 
 /* services */
 
 .services {
-    background-color: var(--bg-gray);
+    background-color: var(--bg-black);
+    margin: 0px auto 70px;
 }
 
 .header {
     text-align: center;
     text-transform: uppercase;
     font-weight: 800;
-    margin: 50px auto;
-    color: var(--violet-dark);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    color: var(--violet-light);
+    /* margin: 70px 0px; */
+    line-height: 100px;
 }
 
 .header-section {
-    font-size: 48px;
+    font-size: 128px;
     font-weight: 800;
-    display: inline-block;
-    /* padding-bottom: 15px; */
-    position: relative;
-}
-
-hr {
-    height: 5px;
-    border: none;
+    text-align: left;
+    padding: 55px 0 50px;
 }
 
 .card-group {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 0px;
+    grid-template-columns: repeat(3, 2fr);
+    grid-gap: 70px;
     justify-content: center;
-    width: 100%;
 }
 
-.card {
-    background: var(--violet-light);
+.card-project {
+    background: var(--bg-gray);
     color: var(--text-white);
-    /* border: 3px solid var(--bg-gray); */
-    border-bottom: 0px solid var(--bg-gray);
-    border-radius: 0;
+    border-radius: 20px;
+    max-width: 450px;
+}
+
+.icon-bg {
+    width: 140px;
+    height: 140px;
+    background: var(--bg-black);
+    border-radius: 100px;
+    margin: 70px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .card-title {
-    font-size: 24px;
+    font-size: 27px;
     font-weight: 800;
-    margin: 30px auto 50px;
+    margin: auto 0 20px auto;
     text-align: center;
 }
 
 .card-text {
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 500;
     text-align: center;
+    color: var(--text-gray);
+    margin-bottom: 70px;
 }
 
 
 /* projects */
+
+.projects {
+    background-color: var(--bg-gray);
+    padding: 0px 0px 50px 0px;
+}
 
 .card-body-projects img {
     margin: 0;
@@ -140,11 +186,8 @@ hr {
 
 /* about  */
 
-.about {
-    margin-top: -50px;
-    padding-top: 50px;
-    background-color: var(--violet-light);
-    margin: auto;
+.about-content {
+    display: flex;
 }
 
 .about-header {
@@ -153,16 +196,21 @@ hr {
     color: var(--text-white);
     font-size: 24px;
     /* margin-bottom: 15px; */
+    margin-bottom: 40px;
+    font-size: 28px;
 }
 
 .about-description {
     color: var(--text-white);
     margin-bottom: 60px;
     font-weight: 500;
+    font-size: 24px;
 }
 
 .about-image {
-    max-width: 300px;
+    max-width: 450px;
+    min-width: 200px;
+    padding: 0px 0px 50px 0px;
 }
 
 .about .container {
@@ -176,6 +224,14 @@ hr {
 
 /* contacts */
 
+.contacts {
+    background-color: var(--bg-gray);
+}
+
+.contacts-content {
+    display: flex;
+}
+
 #form {
     display: flex;
     flex-direction: column;
@@ -186,12 +242,16 @@ hr {
     border: none;
     height: 50px;
     margin: 0 0 20px 0;
+    background-color: var(--bg-black);
+    color: var(--text-white);
 }
 
 #form textarea {
     border: none;
     height: 70px;
     margin: 0 0 30px 0;
+    background-color: var(--bg-black);
+    color: var(--text-white);
 }
 
 #form button {
@@ -202,8 +262,17 @@ hr {
     margin-bottom: 30px;
 }
 
+.contacts-header {
+    font-weight: 800;
+    font-size: 28;
+    color: var(--text-white);
+}
+
 .contacts-description {
     margin-bottom: 50px;
+    color: var(--text-white);
+    max-width: 740px;
+    font-size: 24px;
 }
 
 .contacts-contacts {
@@ -211,10 +280,7 @@ hr {
     margin-bottom: 50px;
     padding-bottom: 50px;
     font-weight: 500;
-}
-
-.contacts-header {
-    font-weight: 800;
+    font-size: 24px;
 }
 
 
@@ -273,6 +339,20 @@ hr {
 
 /* footer  */
 
+footer {
+    margin: 70px 0px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-content {
+    display: flex;
+    justify-items: center;
+}
+
 .decoration-line {
     color: var(--violet-light);
     background-color: var(--violet-light);
@@ -283,10 +363,12 @@ hr {
 .footer-icons {
     display: flex;
     justify-content: space-between;
+    width: 300px;
 }
 
 .footer-icons a {
     color: var(--text-gray);
+    margin: auto;
 }
 
 
@@ -304,12 +386,12 @@ hr {
 }
 
 .project-description p {
-    font-size: 20px;
+    font-size: 24px;
     text-align: justify;
 }
 
 .project-contacts p {
-    font-size: 20px;
+    font-size: 24px;
 }
 
 
@@ -321,17 +403,6 @@ hr {
 
 
 /* psevdoclass */
-
-
-/* .header-section::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 6px;
-    background-color: var(--violet-dark);
-} */
 
 .navbar a:hover {
     color: var(--text-white);
@@ -355,7 +426,7 @@ hr {
 }
 
 .card-text:last-child {
-    margin-bottom: 50px;
+    margin-bottom: 70px;
 }
 
 
@@ -374,6 +445,40 @@ hr {
         font-size: 24px;
     }
     .header-section {
-        font-size: 34px;
+        font-size: 30px;
+        text-align: center;
+    }
+    .video-text {
+        display: none;
+    }
+    .about-content {
+        flex-direction: column;
+    }
+    .contacts-content {
+        flex-direction: column;
+        width: 90%;
+        margin: auto;
+    }
+    .contacts-description {
+        max-width: auto;
+    }
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-icons {
+        margin: 20px auto;
     }
 }
+
+
+/* @media (min-width: 576px) {
+    .card-group>.card:not(:first-child) {
+        border-top-left-radius: 20;
+        border-bottom-left-radius: 20;
+    }
+} */
