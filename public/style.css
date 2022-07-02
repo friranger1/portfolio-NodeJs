@@ -3,7 +3,7 @@
     --violet-dark: #282580;
     --bg-gray: #1A1A1A;
     --bg-black: #161616;
-    --text-gray: #d9d9d9;
+    --text-gray: #d0d0d0;
     --text-white: #FFFFFF;
 }
 
@@ -24,6 +24,11 @@ p {
     font-size: 20px;
 }
 
+.container-fluid {
+    margin: 0;
+    padding: 0;
+}
+
 
 /* navigation */
 
@@ -41,10 +46,11 @@ p {
 
 .navbar-nav {
     text-align: right;
+    margin: 0 100px 0 0;
 }
 
-.navbar-dark .navbar-nav .nav-link {
-    color: var(--bg-white)
+.navbar-toggler {
+    margin: 0 20px;
 }
 
 
@@ -56,7 +62,6 @@ p {
 
 .video {
     width: 100%;
-    opacity: .15;
     background: var(--bg-black);
     margin-top: -25px;
 }
@@ -266,6 +271,7 @@ p {
     font-weight: 800;
     font-size: 28;
     color: var(--text-white);
+    margin-bottom: 40px;
 }
 
 .contacts-description {
@@ -276,7 +282,7 @@ p {
 }
 
 .contacts-contacts {
-    color: var(--text-gray);
+    color: var(--text-white);
     margin-bottom: 50px;
     padding-bottom: 50px;
     font-weight: 500;
@@ -340,7 +346,7 @@ p {
 /* footer  */
 
 footer {
-    margin: 70px 0px;
+    margin: 70px 0px 50px 0;
 }
 
 .footer {
@@ -351,6 +357,10 @@ footer {
 .footer-content {
     display: flex;
     justify-items: center;
+}
+
+.footer-name {
+    color: var(--text-gray)
 }
 
 .decoration-line {
@@ -390,8 +400,11 @@ footer {
     text-align: justify;
 }
 
-.project-contacts p {
+.project-description-text {
     font-size: 24px;
+    max-width: 90%;
+    color: var(--text-gray);
+    margin-bottom: 70px;
 }
 
 
@@ -404,9 +417,9 @@ footer {
 
 /* psevdoclass */
 
-.navbar a:hover {
-    color: var(--text-white);
-    transition: .5s;
+a:hover {
+    color: var(--violet-light);
+    transition: 0.5s;
 }
 
 .footer a:hover {
@@ -436,6 +449,9 @@ footer {
     .card-group {
         grid-template-columns: repeat(auto-fit, 20rem);
     }
+    .navbar-nav {
+        margin: 0;
+    }
     .image-container {
         display: flex;
         justify-content: center;
@@ -453,6 +469,9 @@ footer {
     }
     .about-content {
         flex-direction: column;
+    }
+    .about-image {
+        max-width: 250px;
     }
     .contacts-content {
         flex-direction: column;
