@@ -4,7 +4,7 @@
     --bg-gray: #1A1A1A;
     --bg-black: #161616;
     --text-gray: #d0d0d0;
-    --text-white: #FFFFFF;
+    --text-white: #c2c2c2;
 }
 
 * {
@@ -463,6 +463,7 @@ a:hover {
     .header-section {
         font-size: 30px;
         text-align: center;
+        max-width: 91%;
     }
     .video-text {
         display: none;
