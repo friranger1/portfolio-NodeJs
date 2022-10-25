@@ -2,7 +2,7 @@
 
 <form action="/projects/edit" method="POST" class="project-form">
     <div class="input-field">
-        <input id="title" name="title" type="text" class="validate" required value="{{project.title}}">
+        <textarea id="title" name="title" type="text" class="validate" required rows="4" placeholder="Название" value="{{project.title}}"></textarea>
         <label for="title">Название</label>
         <span class="helper-text" data-error="Введите название"></span>
     </div>
@@ -35,6 +35,6 @@
 </form>
 
 <form action="/projects/remove" method="POST">
+    <button class="btn btn-delete">Удалить проект</button>
     <input type="hidden" name="id" value="{{project.id}}">
-    <button class="btn">Удалить проект</button>
 </form>

@@ -111,8 +111,9 @@ p {
     text-transform: uppercase;
     font-weight: 800;
     color: var(--violet-light);
-    /* margin: 70px 0px; */
     line-height: 100px;
+    max-width: 1745px;
+    
 }
 
 .header-section {
@@ -120,6 +121,8 @@ p {
     font-weight: 800;
     text-align: left;
     padding: 55px 0 50px;
+    max-width: 1745px;
+    line-height: 1;
 }
 
 .card-group {
@@ -386,6 +389,16 @@ footer {
 
 .input-field {
     margin: 10px 50px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+label {
+    color: var(--text-white);
+}
+
+.btn-delete {
+    color: red;
+    margin: 30px;
 }
 
 
