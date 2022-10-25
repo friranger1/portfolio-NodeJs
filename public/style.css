@@ -42,6 +42,7 @@ p {
 .navbar-brand {
     font-weight: 800;
     font-size: 35px;
+    color: red;
 }
 
 .navbar-nav {
@@ -53,6 +54,9 @@ p {
     margin: 0 20px;
 }
 
+.logo {
+    color: var(--violet-light) !important;
+}
 
 /* video  */
 
